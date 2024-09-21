@@ -1,12 +1,11 @@
-package com.example.mediasoft.PostOffice;
+package com.example.mediasoft.PostOffice.model.Dto;
 
 import lombok.Builder;
 import lombok.Data;
 
 @Data
 @Builder
-public class PostOffice {
-    private int index;
+public class NewPostOffice {
     private String name;
     private String address;
 }

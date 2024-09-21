@@ -1,12 +1,24 @@
 package com.example.mediasoft.PostOffice.model;
 
-import lombok.Builder;
-import lombok.Data;
+import jakarta.persistence.*;
+import lombok.*;
 
-@Data
+@Entity
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
 @Builder
+@ToString
+@EqualsAndHashCode
+@Table(name = "PostOffice", schema = "public",
+        uniqueConstraints = {
+                @UniqueConstraint(columnNames = "index")
+        })
 public class PostOffice {
-    private long index;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long index;
     private String name;
     private String address;
 }
