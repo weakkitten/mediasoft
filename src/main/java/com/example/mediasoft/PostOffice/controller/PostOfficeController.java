@@ -19,20 +19,4 @@ public class PostOfficeController {
     public void createPostOffice(NewPostOffice newPostOffice) {
         postOfficeService.createPostOffice(newPostOffice);
     }
-
-    public void arrivalIntermediate() {
-
-    }
-
-    public void departureFromOffice() {
-
-    }
-
-    public void gettingPostItems() {
-
-    }
-
-    public void showTrace() {
-
-    }
 }
